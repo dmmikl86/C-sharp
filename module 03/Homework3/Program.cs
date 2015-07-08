@@ -63,7 +63,7 @@ namespace Homework3
 
         #region helperClasses
 
-        private class Student
+        private abstract class Student
         {
             private string firstName = "";
             private string lastName = "";
@@ -73,19 +73,11 @@ namespace Homework3
                 Birthday = new DateTime();
             }
 
-            public string FirstName
-            {
-                get { return firstName; }
-                set { firstName = value; }
-            }
+            public string FirstName { get; set; }
 
-            public string LastName
-            {
-                get { return lastName; }
-                set { lastName = value; }
-            }
+            public string LastName { get; set; }
 
-            public DateTime Birthday { get; set; }
+            public DateTime Birthday { private get; set; }
 
             public override string ToString()
             {
@@ -99,23 +91,11 @@ namespace Homework3
             private string firstName = "";
             private string specialization = "";
 
-            public string Course
-            {
-                get { return course; }
-                set { course = value; }
-            }
+            public string Course { get; set; }
 
-            public string Specialization
-            {
-                get { return specialization; }
-                set { specialization = value; }
-            }
+            public string Specialization { get; set; }
 
-            public string FirstName
-            {
-                get { return firstName; }
-                set { firstName = value; }
-            }
+            public string FirstName { get; set; }
 
             public override string ToString()
             {
