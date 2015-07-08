@@ -63,7 +63,7 @@ namespace Homework3
 
         #region helperClasses
 
-        private abstract class Student
+        private class Student
         {
             private string firstName = "";
             private string lastName = "";
