@@ -65,9 +65,6 @@ namespace Homework3
 
         private class Student
         {
-            private string firstName = "";
-            private string lastName = "";
-
             public Student()
             {
                 Birthday = new DateTime();
@@ -81,16 +78,12 @@ namespace Homework3
 
             public override string ToString()
             {
-                return "STUDENT INFO: " + firstName + " " + lastName + " " + Birthday.ToShortDateString();
+                return "STUDENT INFO: " + FirstName + " " + LastName + " " + Birthday.ToShortDateString();
             }
         }
 
         private class Teacher
         {
-            private string course = "";
-            private string firstName = "";
-            private string specialization = "";
-
             public string Course { get; set; }
 
             public string Specialization { get; set; }
@@ -99,7 +92,7 @@ namespace Homework3
 
             public override string ToString()
             {
-                return "TEACHER INFO: " + firstName + " " + course + " " + specialization;
+                return "TEACHER INFO: " + FirstName + " " + Course + " " + Specialization;
             }
         }
 
