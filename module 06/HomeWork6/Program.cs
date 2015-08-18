@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace HomeWork6
 {
@@ -8,22 +10,25 @@ namespace HomeWork6
 
         private static void Main(string[] args)
         {
-            Student[] students = new Student[SIZE];
-            students[0] = new Student("Mich", "Dm");
-            students[1] = new Student("Scott", "Liv");
-            students[2] = new Student("Max", "Bill");
+            ArrayList students = new ArrayList();
+            students.Add(new Student("Mich", "Dm"));
+            students.Add(new Student("Scott", "Liv"));
+            students.Add(new Student("Max", "Bill"));
 
-            Teacher[] teachers = new Teacher[SIZE];
-            teachers[0] = new Teacher("Oleg", "Basilica");
+            ArrayList teachers = new ArrayList();
+            teachers.Add(new Teacher("Oleg", "Basilica"));
 
             Degree degree = new Degree("Bachelor");
             UProgram uProgram = new UProgram("Information Technology");
 
             Course course = new Course("Programming with C#");
             course.AddStudents(students);
-            course.AddTeacher(teachers[0]);
+            course.AddTeacher((Teacher)teachers[0]);
             degree.Course = course;
             uProgram.Degree = degree;
+
+            course.ListStudent();
+
 
             Console.WriteLine(uProgram.ToString());
             Console.WriteLine(degree.ToString());

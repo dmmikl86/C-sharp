@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace HomeWork6
@@ -21,9 +22,12 @@ namespace HomeWork6
             _students.Add(student);
         }
 
-        public void AddStudents(Student[] students)
+        public void AddStudents(ArrayList students)
         {
-            _students.AddRange(students);
+            foreach (Student student in students)
+            {
+                _students.Add(student);
+            }
         }
 
         public void AddTeacher(Teacher teacher)
@@ -45,6 +49,14 @@ namespace HomeWork6
         private void Print(Student student)
         {
             allStudents += (student + "; ");
+        }
+
+        public void ListStudent()
+        {
+            foreach (Student student in _students)
+            {
+                Console.WriteLine(student);
+            }
         }
     }
 }
