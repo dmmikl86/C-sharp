@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace HomeWork6
@@ -22,7 +21,7 @@ namespace HomeWork6
             _students.Add(student);
         }
 
-        public void AddStudents(ArrayList students)
+        public void AddStudents(List<Student> students)
         {
             foreach (Student student in students)
             {

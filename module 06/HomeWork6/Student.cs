@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace HomeWork6
 {
     public class Student : Person
     {
-        private Stack gradesStack = new Stack();
+        private Stack<int> gradesStack = new Stack<int>();
 
         public Student(string firstName, string lastName) : base(firstName, lastName)
         {
@@ -13,9 +14,11 @@ namespace HomeWork6
 
         public void TakeTest()
         {
-            gradesStack.Push("Computer Science");
-            gradesStack.Push("Data Science");
-            gradesStack.Push("Softwere Developer");
+            gradesStack.Push(100);
+            gradesStack.Push(96);
+            gradesStack.Push(89);
+            gradesStack.Push(77);
+            gradesStack.Push(94);
         }
 
         public override string ToString()

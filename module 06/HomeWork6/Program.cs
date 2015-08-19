@@ -10,12 +10,12 @@ namespace HomeWork6
 
         private static void Main(string[] args)
         {
-            ArrayList students = new ArrayList();
+            List<Student> students = new List<Student>(SIZE);
             students.Add(new Student("Mich", "Dm"));
             students.Add(new Student("Scott", "Liv"));
             students.Add(new Student("Max", "Bill"));
 
-            ArrayList teachers = new ArrayList();
+            List<Teacher> teachers = new List<Teacher>();
             teachers.Add(new Teacher("Oleg", "Basilica"));
 
             Degree degree = new Degree("Bachelor");
@@ -23,7 +23,7 @@ namespace HomeWork6
 
             Course course = new Course("Programming with C#");
             course.AddStudents(students);
-            course.AddTeacher((Teacher)teachers[0]);
+            course.AddTeacher(teachers[0]);
             degree.Course = course;
             uProgram.Degree = degree;
 
