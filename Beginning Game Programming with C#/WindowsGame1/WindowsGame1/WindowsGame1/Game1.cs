@@ -34,7 +34,6 @@ namespace WindowsGame1
 
             graphics.PreferredBackBufferHeight = WINDOWS_HEIGHT;
             graphics.PreferredBackBufferWidth = WINDOWS_WIDTH;
-
         }
 
         /// <summary>
