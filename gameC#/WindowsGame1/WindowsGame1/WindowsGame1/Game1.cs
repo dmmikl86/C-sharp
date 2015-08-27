@@ -19,10 +19,22 @@ namespace WindowsGame1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        private Texture2D bear0;
+        private Rectangle drawRectangle0;
+
+        const int WINDOWS_WIDTH = 800;
+        const int WINDOWS_HEIGHT = 600;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            //change resolution to 800 by 600
+
+            graphics.PreferredBackBufferHeight = WINDOWS_HEIGHT;
+            graphics.PreferredBackBufferWidth = WINDOWS_WIDTH;
+
         }
 
         /// <summary>
@@ -48,6 +60,9 @@ namespace WindowsGame1
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            bear0 = Content.Load<Texture2D>("linux");
+            drawRectangle0 = new Rectangle(0, 0, WINDOWS_WIDTH, WINDOWS_HEIGHT);
+
         }
 
         /// <summary>
@@ -84,6 +99,9 @@ namespace WindowsGame1
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(bear0, drawRectangle0, Color.White);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
