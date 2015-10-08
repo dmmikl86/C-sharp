@@ -13,13 +13,8 @@ namespace DemoApp1
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>();
-            list.Add(3);
-            list.Add(5);
-            foreach (int n in list)
-            {
-                Console.WriteLine(n);
-            }
+            Helper helper = new Helper();
+            helper.do_1();
         }
     }
 }
